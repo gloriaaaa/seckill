@@ -1,6 +1,7 @@
 package com.seckill.service;
 
 import com.seckill.dao.UserDao;
+import com.seckill.domain.MiaoshaUser;
 import com.seckill.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

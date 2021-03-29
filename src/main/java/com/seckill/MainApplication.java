@@ -1,6 +1,6 @@
 package com.seckill;
 
-import com.seckill.controller.DemoController;
+import com.seckill.controller.SampleController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;

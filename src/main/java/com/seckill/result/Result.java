@@ -5,11 +5,20 @@ public class Result <T>{
     private String msg;
     private T data;
 
+//    private Result(T data) {
+//        this.code=0;
+//        this.msg="success";
+//        this.data = data;
+//    }
     private Result(T data) {
-        this.code=0;
-        this.msg="success";
-        this.data = data;
+    this.data = data;
+}
+
+    private Result(int code, String msg) {
+        this.code = code;
+        this.msg = msg;
     }
+
     private Result(CodeMsg cm) {
         if(cm==null)
         {
