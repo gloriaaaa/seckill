@@ -3,7 +3,12 @@ package com.gloria.miaosha.vo;
 import java.util.Date;
 
 import com.gloria.miaosha.domain.Goods;
-//将Goods表和MiaoshaGoods表合并
+/**
+ * 创建GoodsDao
+ * 这里查数据库的时候，不只是查找的商品的信息，我们同时想把商品的秒杀信息也一起查出来，
+ * 但是这两个不同数据在两个表里面，
+ * 因此封装一个GoodsVo，将两张表的数据封装到一起。
+ */
 public class GoodsVo extends Goods{
 	private Integer stockCount;
 	private Date startDate;

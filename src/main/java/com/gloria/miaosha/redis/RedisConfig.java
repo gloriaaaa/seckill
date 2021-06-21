@@ -4,7 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix="redis")//将application.properties里面前缀redis都读取
+@ConfigurationProperties(prefix="redis")//指定application.properties里面前缀是redis的配置项，与配置项里的属性对应起来
+
 public class RedisConfig {
 	private String host;
 	private int port;

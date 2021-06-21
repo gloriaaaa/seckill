@@ -14,7 +14,14 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//将UserArgumentResolver注册到config里面去
+/**
+ * 创建一个UserArgumentResolver类并且实现接口HandlerMethodArgumentResolver，然后重写里面的方法resolveArgument和supportsParameter方法，
+ * 想让MiaoshaUser的实例对象可以像SpringMVC中的controller方法中的HttpServletRequest的实例对象request一样
+ * 可以直接使用，
+ * 这里需要解析前端传来的cookie里面的token或者请求参数里面的token
+ * 对应注解@RequestParam和@CookieValue
+
+ */
 @Service
 public class UserArgumentResolver implements HandlerMethodArgumentResolver{
 

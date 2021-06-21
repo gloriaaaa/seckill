@@ -10,15 +10,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-/**
- * 相当于一个controller
- *
- */
-@ControllerAdvice
+@ControllerAdvice//是一个@Component，用于定义@ExceptionHandler、@InitBinder和ModelAttribute方法
+//会对所有使用@RequestMapping方法进行检查拦截，并进行异常处理
 @ResponseBody
+//定义一个全局异常处理的拦截器
 public class GlobalExceptionHandler {
 	//拦截什么异常
-	@ExceptionHandler(value=Exception.class)//拦截所有的异常
+	@ExceptionHandler(value=Exception.class)//标记拦截的异常，拦截所有的异常
 	public Result<String> exceptionHandler(HttpServletRequest request, Exception e){
 		e.printStackTrace();
 		if(e instanceof GlobalException) {

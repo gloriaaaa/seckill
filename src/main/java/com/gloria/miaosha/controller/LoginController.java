@@ -67,6 +67,10 @@ public class LoginController {
 	  //使用JSR303校验
 		@RequestMapping("/do_login")//作为异步操作
 		@ResponseBody
+		/**
+		 * 这里用实体类接收前端提交的json，Controller还可以通过HttpServletResponse等获取请求参数
+		 * 几种方法总结见 https://www.cnblogs.com/lcxdevelop/p/8309018.html
+		 */
 		public Result<Boolean> doLogin(HttpServletResponse response,@Valid LoginVo loginVo) {//0代表成功
 			//log.info(loginVo.toString());
 			//参数校验  使用了注解参数校验

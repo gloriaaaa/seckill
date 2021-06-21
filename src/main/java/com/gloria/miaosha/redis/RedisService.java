@@ -6,6 +6,9 @@ import com.alibaba.fastjson.JSONObject;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+/*
+封装了常用的Redis方法操作
+ */
 @Service
 public class RedisService {
 	@Autowired

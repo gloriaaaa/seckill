@@ -47,7 +47,8 @@ public class CodeMsg {
 	}
 	
 	//返回一个带参数的错误码
-	public CodeMsg fillArgs(Object...args) {//变参
+	public CodeMsg fillArgs(Object...args) {
+		//Object ...objects(称为可变个数的形参),即这个方法可以传递多个参数，这个参数的个数是不确定的。允许一切继承自Object的对象作为参数。
 		int code=this.code;
 		//message是填充了参数的message
 		String message=String.format(this.msg, args);

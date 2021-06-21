@@ -157,8 +157,15 @@ public class MiaoshaUserService {
 		
 	}
 	/**
-	 * 
-	 * 添加或者叫做更新cookie
+	 *
+	 * 添加/更新cookie
+	 * 将MiaoshaUserKey前缀+sessionId（sessionId即token）组成了一个完整的Key，
+	 * 例如：“MiaoshaUserKey:tke67ad5b4ebbd4aef8e8bb36dab70c4fc”,
+	 * 其中MiaoshaUserKey前缀=“MiaoshaUserKey:tk”,token=“e67ad5b4ebbd4aef8e8bb36dab70c4fc”，拼接成Key,
+	 * 和对应的用户信息user（user对象信息会转换为字符串类型）一起存入Redis 缓存中。
+	 * 此token对应的是哪一个用户,将我们的私人信息存放到一个第三方的缓存中，
+	 * 当访问其他页面的时候，就可以从cookie中获取 token,再访问redis 拿到用户信息来判断登录情况了。
+
 	 */
 	public void addCookie(MiaoshaUser user,String token,HttpServletResponse response) {
 		// 可以用老的token，不用每次都生成cookie，可以用之前的

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-// 用于标注类的实例是一个控制器，
-@RequestMapping("/demo")//注意！！！加了一个路径
+//用于标注类的实例是一个控制器，Spring使用扫描机制查找应用程序中所有基于注解的控制器类
+@RequestMapping("/demo")// 控制器内部要为每个请求动作开发相应的请求处理方法，标注在类上说明该控制器处理的所有请求都映射到value属性值指定的目录下
 public class DemoController {
 	@Autowired
 	UserService userService;
