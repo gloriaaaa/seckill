@@ -10,6 +10,17 @@ seno是基于Spring Boot+MyBatis框架开发的限时秒杀系统，针对秒杀
 - 使用MD5加密随机串生成动态url，隐藏秒杀地址。
 
 ## 图片演示
+登录
+![Image text](https://github.com/gloriaaaa/seno/blob/master/imgs/login.png)
+
+商品列表
+![Image text](https://github.com/gloriaaaa/seno/blob/master/imgs/goods_list.png)
+
+秒杀成功
+![Image text](https://github.com/gloriaaaa/seno/blob/master/imgs/miaoshasuccess.png)
+
+订单详情
+![Image text](https://github.com/gloriaaaa/seno/blob/master/imgs/order.png)
 
 
 
